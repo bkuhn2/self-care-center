@@ -25,7 +25,7 @@ h1 {
 }
 
 #Message-Prompt {
-  color: white;
+  color: #ffffff;
   font-family: "Quicksand", sans-serif;
   text-align: center;
   margin-top: 107px;
@@ -68,13 +68,24 @@ label {
 
 #message-display-rectangle {
   background-color: #ffffff;
-  width: 570px;
-  height: 99px;
+  width: 800px;
+  height: 162px;
   border-radius: 11px;
   margin: auto;
-  margin-top: -10px;
+  margin-top: 110px;
+  text-align: center;
 }
 
 .default-pic {
   width: 9%;
+  padding: 40px;
+}
+
+#message-text {
+  color: #000000;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4em;
+  padding: 54px;
+  word-wrap: break-word;
+  hyphens: auto;
 }
