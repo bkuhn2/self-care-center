@@ -1,8 +1,9 @@
 var affirmationButton = document.querySelector('#affirmation-button');
 var mantraButton = document.querySelector('#mantra-button');
 var receiveButton = document.querySelector('#receive-button');
-var mainMessageText = document.querySelector('#message-text')
+var viewAllButton = document.querySelector('#view-all-messages')
 
+var mainMessageText = document.querySelector('#message-text');
 var defaultImg = document.querySelector('.default-pic');
 
 
@@ -12,7 +13,7 @@ receiveButton.addEventListener('click', receiveMessage)
 
 
 function makeRandomNumber(array) {
-  return Math.floor(Math.random() * array.length); // NOT WORKING YET
+  return Math.floor(Math.random() * array.length);
 }
 
 function checkAffirmation() {

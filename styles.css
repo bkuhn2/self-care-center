@@ -66,6 +66,10 @@ label {
   margin-top: 15px;
 }
 
+#Message-Display {
+  text-align: center;
+}
+
 #message-display-rectangle {
   background-color: #ffffff;
   width: 800px;
@@ -88,6 +92,19 @@ label {
   padding: 54px;
   word-wrap: break-word;
   hyphens: auto;
+}
+
+#view-all-messages {
+  margin-top: 13px;
+  background-color: #f7e4bf;
+  color: #134d71;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 210px;
+  height: 31px;
+  border-radius: 7px;
+  border: none;
 }
 
 .shake {
