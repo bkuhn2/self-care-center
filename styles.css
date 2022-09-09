@@ -37,6 +37,7 @@ h1 {
   height: 99px;
   border-radius: 11px;
   margin: auto;
+  margin-top: -10px;
 }
 
 label {
@@ -50,6 +51,7 @@ label {
 #affirmation-button, #mantra-button {
   width: 19px;
   height: 19px;
+  margin-top: 22px;
 }
 
 #receive-button {
@@ -61,5 +63,18 @@ label {
   height: 29px;
   border-radius: 7px;
   border: none;
-  
+  margin-top: 15px;
+}
+
+#message-display-rectangle {
+  background-color: #ffffff;
+  width: 570px;
+  height: 99px;
+  border-radius: 11px;
+  margin: auto;
+  margin-top: -10px;
+}
+
+.default-pic {
+  width: 9%;
 }

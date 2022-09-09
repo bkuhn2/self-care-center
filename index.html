@@ -14,12 +14,17 @@
         <h2 id="question">Which type of message?</h2>
         <form class="question-rectangle">
           <input type="radio" id="affirmation-button" value="affirmation">
-            <label for="affirmation-button">affirmation</label>
+            <label for="affirmation-button" id="affirmation-button-label">affirmation</label>
           <input type="radio" id="mantra-button" value="mantra">
-            <label for="mantra-button">mantra</label>
+            <label for="mantra-button" id="mantra-button-label">mantra</label>
             <br>
-          <button id="receive-button" type="submit">Receive Message</button>
+          <button id="receive-button" type="button">Receive Message</button>
         </form>
+      </section>
+      <section id="Message-Display">
+        <div id="message-display-rectangle">
+          <img class="default-pic" src="./assets/meditate.svg">
+        </div>
       </section>
     <section id="Messages-Page"
       <header class="hidden" id="Messages-Page-Header">
