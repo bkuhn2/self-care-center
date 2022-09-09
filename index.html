@@ -6,14 +6,34 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <header alt="Main Page Header">
-      <h1>&#10024; Self Care Center &#10024;</h1>
-    </header>
-    
-    <header alt="Messages Page Header">
-      <h1 class="hidden">&#128395; Saved Messages &#128395;</h1>
-    </header>
+    <section id="Main-Page">
+      <header id="Main-Page-Header">
+        <h1 id="Main Title">&#10024; Self Care Center &#10024;</h1>
+      </header>
+      <section id="Message-Prompt">
+        <h2 id="question">Which type of message?</h2>
+        <form class="question-rectangle">
+          <input type="radio" id="affirmation-button" value="affirmation">
+            <label for="affirmation-button" id="affirmation-button-label">affirmation</label>
+          <input type="radio" id="mantra-button" value="mantra">
+            <label for="mantra-button" id="mantra-button-label">mantra</label>
+            <br>
+          <button id="receive-button" type="button">Receive Message</button>
+        </form>
+      </section>
+      <section id="Message-Display">
+        <div id="message-display-rectangle">
+          <img class="default-pic" src="./assets/meditate.svg">
+          <p id="message-text"></p>
+        </div>
+      </section>
+    <section id="Messages-Page"
+      <header class="hidden" id="Messages-Page-Header">
+        <h1 id="Messages-Title">&#128395; Saved Messages &#128395;</h1>
+      </header>
+    </section>
 
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="arrays.js"></script>
   </body>
 </html>
