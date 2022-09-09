@@ -1,27 +1,38 @@
 var affirmationButton = document.querySelector('#affirmation-button');
 var mantraButton = document.querySelector('#mantra-button');
 var receiveButton = document.querySelector('#receive-button');
+var mainMessageText = document.querySelector('#message-text')
 
 var defaultImg = document.querySelector('.default-pic');
 
-affirmationButton.addEventListener('click', uncheckMantra)
-mantraButton.addEventListener('click', uncheckAffirmation)
+
+affirmationButton.addEventListener('click', checkAffirmation)
+mantraButton.addEventListener('click', checkMantra)
 receiveButton.addEventListener('click', receiveMessage)
 
-function uncheckMantra() {
-  mantraButton.checked = false;
+
+function makeRandomNumber(array) {
+  return Math.floor(Math.random() * array.length); // NOT WORKING YET
 }
 
-function uncheckAffirmation() {
+function checkAffirmation() {
+  mantraButton.checked = false;
+  }
+
+function checkMantra() {
   affirmationButton.checked = false;
 }
 
 function receiveMessage() {
   if (affirmationButton.checked === true) {
     defaultImg.classList.add('hidden');
-
-  } else if (mantraButton.check === true) {
+    mainMessageText.innerText = ''
+    mainMessageText.innerText = affirmations[makeRandomNumber(affirmations)];
+  } else if (mantraButton.checked === true) {
     defaultImg.classList.add('hidden');
-
+    mainMessageText.innerText = '';
+    mainMessageText.innerText = mantras[makeRandomNumber(mantras)];
+  } else {
+    defaultImg.classList.toggle('shake');
   }
 }
