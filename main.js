@@ -4,6 +4,7 @@ var receiveButton = document.querySelector('#receive-button');
 var viewAllButton = document.querySelector('#view-all-messages')
 var homeButton = document.querySelector('#go-home')
 var createButton = document.querySelector('#create-new')
+var deleteButtons = document.querySelectorAll('#delete-button') //not working
 
 var userChoice = document.querySelector('#message-type-selector')
 var userText = document.querySelector('#user-text-input')
@@ -73,6 +74,7 @@ function loadMessagesPage() {
     affirmationsList.innerHTML += `
       <section id="${makeID(10000)}" class="displayed-message">
       <p id="displayed-message-text">${affirmations[i]}</p>
+      <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
   }
@@ -81,6 +83,7 @@ function loadMessagesPage() {
     mantrasList.innerHTML += `
       <section id="${makeID(10000)}" class="displayed-message">
       <p id="displayed-message-text">${mantras[i]}</p>
+      <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
   }
