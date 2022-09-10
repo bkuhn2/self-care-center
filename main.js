@@ -2,6 +2,8 @@ var affirmationButton = document.querySelector('#affirmation-button');
 var mantraButton = document.querySelector('#mantra-button');
 var receiveButton = document.querySelector('#receive-button');
 var viewAllButton = document.querySelector('#view-all-messages')
+var homeButton = document.querySelector('#go-home')
+var createButton = document.querySelector('#create-new')
 
 var mainMessageText = document.querySelector('#message-text');
 var defaultImg = document.querySelector('.default-pic');
