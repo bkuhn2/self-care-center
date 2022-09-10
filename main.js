@@ -5,6 +5,9 @@ var viewAllButton = document.querySelector('#view-all-messages')
 var homeButton = document.querySelector('#go-home')
 var createButton = document.querySelector('#create-new')
 
+var userChoice = document.querySelector('#message-type-selector')
+var userText = document.querySelector('#user-text-input')
+
 var mainMessageText = document.querySelector('#message-text');
 var defaultImg = document.querySelector('.default-pic');
 
@@ -16,6 +19,7 @@ mantraButton.addEventListener('click', checkMantra)
 receiveButton.addEventListener('click', receiveMessage)
 viewAllButton.addEventListener('click', viewAllMessages)
 homeButton.addEventListener('click', goHome)
+createButton.addEventListener('click', createNew)
 
 
 function makeRandomNumber(array) {
@@ -52,4 +56,14 @@ function viewAllMessages() {
 function goHome() {
   mainPage.classList.remove('hidden')
   messagesPage.classList.add('hidden')
+}
+
+function createNew() {
+  if (userChoice.value === 'affirmation') {
+    affirmations.unshift(userText.value)
+  } else if (userChoice.value === 'mantra') {
+    mantras.unshift(userText.value)
+  }
+  // add to array
+  //
 }
