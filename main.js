@@ -25,6 +25,7 @@ receiveButton.addEventListener('click', receiveMessage)
 viewAllButton.addEventListener('click', viewAllMessages)
 homeButton.addEventListener('click', goHome)
 createButton.addEventListener('click', createNew)
+affirmationsList.addEventListener('dblclick', editAffirmationMessage)
 
 
 function makeRandomNumber(array) {
@@ -122,4 +123,26 @@ function createNew() {
     mantras.unshift(userText.value)
   }
   loadMessages();
+}
+
+function editAffirmationMessage() {
+  var target = event.target.parentElement
+  var text = target.querySelector('#displayed-message-text')
+  var editInput = target.querySelector('#edit-input')
+  var editButton = target.querySelector('#edit-button')
+  for (var i = 0; i < affirmations.length; i++) {
+    if (text.innerText === affirmations[i]) {
+      var indexPosition = i;
+    }
+  }
+  editInput.classList.remove('hidden')
+  editButton.classList.remove('hidden')
+  editInput.value = text.innerText
+
+  editButton.addEventListener('click', applyEdits)
+  function applyEdits(){
+    affirmations.splice(indexPosition, 1, editInput.value)
+    loadMessages();
+  }
+
 }
