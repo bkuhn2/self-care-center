@@ -7,6 +7,8 @@ var createButton = document.querySelector('#create-new')
 
 var userChoice = document.querySelector('#message-type-selector')
 var userText = document.querySelector('#user-text-input')
+var affirmationsList = document.querySelector('#affirmations-list')
+var mantrasList = document.querySelector('#mantras-list')
 
 var mainMessageText = document.querySelector('#message-text');
 var defaultImg = document.querySelector('.default-pic');
@@ -24,6 +26,10 @@ createButton.addEventListener('click', createNew)
 
 function makeRandomNumber(array) {
   return Math.floor(Math.random() * array.length);
+}
+
+function makeID(number) {
+  return Math.floor(Math.random() * number);
 }
 
 function checkAffirmation() {
@@ -51,11 +57,33 @@ function receiveMessage() {
 function viewAllMessages() {
   mainPage.classList.add('hidden')
   messagesPage.classList.remove('hidden')
+  loadMessagesPage();
 }
 
 function goHome() {
   mainPage.classList.remove('hidden')
   messagesPage.classList.add('hidden')
+}
+
+function loadMessagesPage() {
+  affirmationsList.innerHTML = '';
+  mantrasList.innerHTML = '';
+
+  for (var i = 0; i < affirmations.length; i++){
+    affirmationsList.innerHTML += `
+      <section id="${makeID(10000)}" class="displayed-message">
+      <p id="displayed-message-text">${affirmations[i]}</p>
+      </section>
+    `
+  }
+
+  for (var i = 0; i < mantras.length; i++) {
+    mantrasList.innerHTML += `
+      <section id="${makeID(10000)}" class="displayed-message">
+      <p id="displayed-message-text">${mantras[i]}</p>
+      </section>
+    `
+  }
 }
 
 function createNew() {
@@ -64,6 +92,5 @@ function createNew() {
   } else if (userChoice.value === 'mantra') {
     mantras.unshift(userText.value)
   }
-  // add to array
-  //
+  loadMessagesPage();
 }
