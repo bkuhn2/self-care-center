@@ -6,16 +6,15 @@ var homeButton = document.querySelector('#go-home')
 var createButton = document.querySelector('#create-new')
 var deleteButtons
 
+var messagesPage = document.querySelector('#Messages-Page')
 var userChoice = document.querySelector('#message-type-selector')
 var userText = document.querySelector('#user-text-input')
 var affirmationsList = document.querySelector('#affirmations-list')
 var mantrasList = document.querySelector('#mantras-list')
 
+var mainPage = document.querySelector('#Main-Page');
 var mainMessageText = document.querySelector('#message-text');
 var defaultImg = document.querySelector('.default-pic');
-
-var mainPage = document.querySelector('#Main-Page');
-var messagesPage = document.querySelector('#Messages-Page')
 
 
 window.addEventListener('load', loadMessages)
