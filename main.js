@@ -4,7 +4,7 @@ var receiveButton = document.querySelector('#receive-button');
 var viewAllButton = document.querySelector('#view-all-messages')
 var homeButton = document.querySelector('#go-home')
 var createButton = document.querySelector('#create-new')
-var deleteButtons = document.querySelectorAll('#delete-button') //not working
+var deleteButtons
 
 var userChoice = document.querySelector('#message-type-selector')
 var userText = document.querySelector('#user-text-input')
@@ -87,6 +87,7 @@ function loadMessagesPage() {
       </section>
     `
   }
+  deleteButtons = document.querySelectorAll('#delete-button')
 }
 
 function createNew() {
