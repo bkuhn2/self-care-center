@@ -17,6 +17,8 @@ var defaultImg = document.querySelector('.default-pic');
 var mainPage = document.querySelector('#Main-Page');
 var messagesPage = document.querySelector('#Messages-Page')
 
+
+window.addEventListener('load', loadMessages)
 affirmationButton.addEventListener('click', checkAffirmation)
 mantraButton.addEventListener('click', checkMantra)
 receiveButton.addEventListener('click', receiveMessage)
@@ -31,7 +33,7 @@ function makeRandomNumber(array) {
 
 function makeID(number) {
   return Math.floor(Math.random() * number);
-}
+} // even need now???
 
 function checkAffirmation() {
   mantraButton.checked = false;
@@ -58,7 +60,7 @@ function receiveMessage() {
 function viewAllMessages() {
   mainPage.classList.add('hidden')
   messagesPage.classList.remove('hidden')
-  loadMessagesPage();
+  loadMessages();
 }
 
 function goHome() {
@@ -66,28 +68,47 @@ function goHome() {
   messagesPage.classList.add('hidden')
 }
 
-function loadMessagesPage() {
+function loadMessages() {
   affirmationsList.innerHTML = '';
   mantrasList.innerHTML = '';
-
   for (var i = 0; i < affirmations.length; i++){
     affirmationsList.innerHTML += `
-      <section id="${makeID(10000)}" class="displayed-message">
+      <section id="${affirmations[i]}" class="displayed-message">
       <p id="displayed-message-text">${affirmations[i]}</p>
       <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
   }
-
   for (var i = 0; i < mantras.length; i++) {
     mantrasList.innerHTML += `
-      <section id="${makeID(10000)}" class="displayed-message">
+      <section id="${mantras[i]}" class="displayed-message">
       <p id="displayed-message-text">${mantras[i]}</p>
       <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
   }
-  deleteButtons = document.querySelectorAll('#delete-button')
+  deleteButtons = document.querySelectorAll('#delete-button');
+  deleteButtons.forEach(function (i) {
+    i.addEventListener('click', deleteMessage)
+  })
+}
+
+function deleteMessage() {
+  var messageToDelete = event.target.parentElement;
+
+  for (var i = 0; i < affirmations.length; i++) {
+    if (messageToDelete.id === affirmations[i]) {
+      affirmations.splice(i, 1);
+      messageToDelete.remove()
+    }
+  }
+
+  for (var i = 0; i < mantras.length; i++) {
+    if (messageToDelete.id === mantras[i]) {
+      mantras.splice(i, 1);
+      messageToDelete.remove()
+    }
+  }
 }
 
 function createNew() {
@@ -96,5 +117,5 @@ function createNew() {
   } else if (userChoice.value === 'mantra') {
     mantras.unshift(userText.value)
   }
-  loadMessagesPage();
+  loadMessages();
 }
