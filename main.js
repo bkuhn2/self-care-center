@@ -6,10 +6,13 @@ var viewAllButton = document.querySelector('#view-all-messages')
 var mainMessageText = document.querySelector('#message-text');
 var defaultImg = document.querySelector('.default-pic');
 
+var mainPage = document.querySelector('#Main-Page');
+var messagesPage = document.querySelector('#Messages-Page')
 
 affirmationButton.addEventListener('click', checkAffirmation)
 mantraButton.addEventListener('click', checkMantra)
 receiveButton.addEventListener('click', receiveMessage)
+viewAllButton.addEventListener('click', viewAllMessages)
 
 
 function makeRandomNumber(array) {
@@ -36,4 +39,9 @@ function receiveMessage() {
   } else {
     defaultImg.classList.toggle('shake');
   }
+}
+
+function viewAllMessages() {
+  mainPage.classList.add('hidden')
+  messagesPage.classList.remove('hidden')
 }
