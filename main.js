@@ -15,6 +15,7 @@ affirmationButton.addEventListener('click', checkAffirmation)
 mantraButton.addEventListener('click', checkMantra)
 receiveButton.addEventListener('click', receiveMessage)
 viewAllButton.addEventListener('click', viewAllMessages)
+homeButton.addEventListener('click', goHome)
 
 
 function makeRandomNumber(array) {
@@ -46,4 +47,9 @@ function receiveMessage() {
 function viewAllMessages() {
   mainPage.classList.add('hidden')
   messagesPage.classList.remove('hidden')
+}
+
+function goHome() {
+  mainPage.classList.remove('hidden')
+  messagesPage.classList.add('hidden')
 }
