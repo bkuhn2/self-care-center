@@ -111,6 +111,17 @@ label {
   border: none;
 }
 
+.page-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-body {
+  display: flex;
+  justify-content: space-between;
+}
+
 .shake {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
