@@ -26,12 +26,43 @@
           <img class="default-pic" src="./assets/meditate.svg">
           <p id="message-text"></p>
         </div>
+        <button id="view-all-messages" type="button">View All Messages</button>
       </section>
-    <section id="Messages-Page"
-      <header class="hidden" id="Messages-Page-Header">
-        <h1 id="Messages-Title">&#128395; Saved Messages &#128395;</h1>
-      </header>
     </section>
+    <section class="hidden" id="Messages-Page">
+      <section class="page-top">
+        <header id="Messages-Page-Header">
+          <h1 id="Messages-Title">&#128395; Saved Messages &#128395;</h1>
+          <button id="go-home" type="button">&#128072;  Home</button>
+        </header>
+        <div id="create-new-area">
+          <h2>Create A New Message:</h2>
+            <select name="message-type" id="message-type-selector">
+              <option disabled selected value> select a type</option>
+              <option value="affirmation">Affirmation</option>
+              <option value="mantra">Mantra</option>
+            </select>
+            <input id="user-text-input" type="text">
+            <button id="create-new" type="button">Create</button>
+        </div>
+      </section>
+      <section class="page-body">
+        <div id="affirmations-area">
+          <h2>Affirmations</h2>
+          <p>Double-Click on a Message to Edit</p>
+          <p>Click &#128465; to Delete</p>
+          <ul id="affirmations-list">
+          </ul>
+        </div>
+        <div id="mantras-area">
+          <h2>Mantras</h2>
+          <p>Double-Click on a Message to Edit</p>
+          <p>Click &#128465; to Delete</p>
+          <ul id="mantras-list">
+          </ul>
+        </div>
+      </section>
+      </section>
 
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="arrays.js"></script>

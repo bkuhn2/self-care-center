@@ -24,6 +24,10 @@ h1 {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 #Message-Prompt {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;
@@ -66,6 +70,10 @@ label {
   margin-top: 15px;
 }
 
+#Message-Display {
+  text-align: center;
+}
+
 #message-display-rectangle {
   background-color: #ffffff;
   width: 800px;
@@ -88,6 +96,147 @@ label {
   padding: 54px;
   word-wrap: break-word;
   hyphens: auto;
+}
+
+#view-all-messages {
+  margin-top: 13px;
+  background-color: #f7e4bf;
+  color: #134d71;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 210px;
+  height: 31px;
+  border-radius: 7px;
+  border: none;
+}
+
+.page-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 43px;
+}
+
+#Messages-Page-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#go-home {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8em;
+  width: 140px;
+  height: 29px;
+  border-radius: 7px;
+  border: none;
+  margin-top: -20px;
+  opacity: 82%
+}
+
+#create-new-area {
+  font-family: "Quicksand", sans-serif;
+  background-color: #134d71;
+  width: 730px;
+  height: 66px;
+  border-color: #f7e4bf;
+  border-radius: 17px;
+  border-style: solid;
+  border-width: 0.5px;
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  flex-direction: row
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#create-new-area h2 {
+  color: #f7e4bf;
+  font-size: 1.3em;
+}
+
+#message-type-selector, #create-new {
+  font-family: "Quicksand", sans-serif;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 0px;
+}
+
+#user-text-input {
+    font-family: "Quicksand", sans-serif;
+    width: 280px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 0px;
+}
+
+#affirmations-area, #mantras-area {
+  width: 450px;
+  background: rgb(247,228,191);
+  background: linear-gradient(180deg, rgba(247,228,191,1) 0%, rgba(120,167,198,0.9192051820728291) 14%);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#affirmations-list, #mantras-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.displayed-message {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 7px;
+  margin-right: 36px;
+  font-weight: bolder;
+}
+#edit-input {
+   width: 333px;
+   font-family: "Quicksand", sans-serif;
+   font-size: .8em;
+   margin: 4px;
+   border-radius: 5px;
+   border-style: solid;
+   border-width: .4px;
+}
+
+#delete-button {
+  margin: 5px;
+  margin-top: -10px;
+  background: #134d71;
+  border-width: 0px;
+  border-radius: 7px;
+  font-size: .8em;
+  opacity: 90%;
+}
+
+#edit-button {
+  margin: 4px;
+  font-family: "Quicksand", sans-serif;
+  font-size: .7em;
+  background: #f7e4bf;
+  border-width: .5px;
+  border-style: solid;
+  border-radius: 7px;
+  color: #134d71;
 }
 
 .shake {
