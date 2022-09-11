@@ -24,6 +24,10 @@ h1 {
   display: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 #Message-Prompt {
   color: #ffffff;
   font-family: "Quicksand", sans-serif;

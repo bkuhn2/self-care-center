@@ -76,8 +76,8 @@ function loadMessages() {
     affirmationsList.innerHTML += `
       <section id="${affirmations[i]}" class="displayed-message">
       <p id="displayed-message-text">${affirmations[i]}</p>
-      <input class="hidden" id="edit-input" type="text">
-      <button class="hidden" type="button" id="edit-button">apply</button>
+      <input class="invisible" id="edit-input" type="text">
+      <button class="invisible" type="button" id="edit-button">apply</button>
       <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
@@ -86,8 +86,8 @@ function loadMessages() {
     mantrasList.innerHTML += `
       <section id="${mantras[i]}" class="displayed-message">
       <p id="displayed-message-text">${mantras[i]}</p>
-      <input class="hidden" id="edit-input" type="text">
-      <button class="hidden" type="button" id="edit-button">apply</button>
+      <input class="invisible" id="edit-input" type="text">
+      <button class="invisible" type="button" id="edit-button">apply</button>
       <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
@@ -135,8 +135,8 @@ function editAffirmationMessage() {
       var indexPosition = i;
     }
   }
-  editInput.classList.remove('hidden')
-  editButton.classList.remove('hidden')
+  editInput.classList.remove('invisible')
+  editButton.classList.remove('invisible')
   editInput.value = text.innerText
 
   editButton.addEventListener('click', applyEdits)
@@ -156,8 +156,8 @@ function editMantraMessage() {
       var indexPosition = i;
     }
   }
-  editInput.classList.remove('hidden')
-  editButton.classList.remove('hidden')
+  editInput.classList.remove('invisible')
+  editButton.classList.remove('invisible')
   editInput.value = text.innerText
 
   editButton.addEventListener('click', applyEdits)
