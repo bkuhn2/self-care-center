@@ -76,9 +76,9 @@ function loadMessages() {
     affirmationsList.innerHTML += `
       <section id="${affirmations[i]}" class="displayed-message">
       <p id="displayed-message-text">${affirmations[i]}</p>
+      <button type="button" id="delete-button">&#128465;</button>
       <input class="invisible" id="edit-input" type="text">
       <button class="invisible" type="button" id="edit-button">apply</button>
-      <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
   }
@@ -86,9 +86,9 @@ function loadMessages() {
     mantrasList.innerHTML += `
       <section id="${mantras[i]}" class="displayed-message">
       <p id="displayed-message-text">${mantras[i]}</p>
+      <button type="button" id="delete-button">&#128465;</button>
       <input class="invisible" id="edit-input" type="text">
       <button class="invisible" type="button" id="edit-button">apply</button>
-      <button type="button" id="delete-button">&#128465;</button>
       </section>
     `
   }
